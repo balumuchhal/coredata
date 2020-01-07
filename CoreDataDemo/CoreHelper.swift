@@ -68,7 +68,21 @@ class CoreHelper {
         }
         return false
     }
-    
+    func delete(person:PersonData) -> Bool {
+        let fetchRequest =  NSFetchRequest<NSManagedObject>(entityName: "Person")
+        fetchRequest.predicate = NSPredicate(format: "id = %@", person.id)
+        do {
+            if let data = try viewContext.fetch(fetchRequest).first {
+                viewContext.delete(data)
+                try viewContext.save()
+                return true
+            }
+        }
+        catch let error as NSError {
+            print("Could not edit. \(error), \(error.userInfo)")
+        }
+        return false
+    }
     func getPeople() -> [PersonData] {
         var people:[PersonData] = []
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
