@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     
     //MARK:- UDF
     func setTable() {
+        self.tableView.separatorStyle = .none
         self.people = self.core.getPeople()
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -109,6 +110,7 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = people[indexPath.row].name
+        cell.setCell()
         return cell
     }
     
