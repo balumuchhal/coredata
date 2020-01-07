@@ -1,2 +1,4 @@
-# coredata
-Insert,update,delete,select
+# Core Data Demo
+Insert,update,delete and select in CoreData
+
+
