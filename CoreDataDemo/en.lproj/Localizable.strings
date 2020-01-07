@@ -1,0 +1,16 @@
+/* 
+  Localization.strings
+  CoreDataDemo
+
+  Created by Elluminati on 07/01/20.
+  Copyright © 2020 swiftui learn. All rights reserved.
+*/
+
+"TXT_NEW_NAME" = "New Name";
+"TXT_ADD_NEW_NAME" = "Add a new name";
+"TXT_EDIT_NAME" = "Edit Name";
+"TXT_EDIT_A_NAME" = "Edit a name";
+"TXT_SAVE" = "Save";
+"TXT_EDIT" = "Edit";
+"TXT_CANCEL" = "Cancel";
+"TXT_THE_LIST" = "The List";
